@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume Forge</title>
+<meta name="description" content="Paste a job description, get a tailored resume rendered in the exact layout, with the gates run on it.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128196;</text></svg>">
+<link rel="stylesheet" href="/ui.css">
+<link rel="stylesheet" href="/resume.css">
+</head>
+<body>
+
+<header>
+  <h1>Resume Forge</h1>
+  <p>Paste a posting, get a filled prompt, paste the result back, print the PDF.</p>
+</header>
+
+<main>
+
+  <section class="step active" id="step1">
+    <div class="head"><span class="n">1</span><h2>The posting</h2><span class="sub" id="corpusInfo"></span></div>
+    <div class="body">
+      <label for="jd">Job description, pasted whole</label>
+      <textarea id="jd" rows="10" placeholder="Paste the full posting, including the requirements and preferred qualifications."></textarea>
+      <div class="row">
+        <div>
+          <label for="pages">Pages</label>
+          <select id="pages"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select>
+        </div>
+        <div style="flex:3 1 340px">
+          <label for="notes">Anything extra to tell the model (optional)</label>
+          <input id="notes" placeholder="e.g. lead with engineering, not publications">
+        </div>
+      </div>
+      <div class="actions"><button id="gen">Build the prompt</button></div>
+      <p class="msg" id="msg"></p>
+    </div>
+  </section>
+
+  <section class="step" id="step2">
+    <div class="head"><span class="n">2</span><h2>Run it in Claude</h2><span class="sub" id="promptMeta"></span></div>
+    <div class="body">
+      <p class="meta">Copy this, paste it into Claude, and copy the JSON it returns.</p>
+      <textarea id="prompt" rows="12" readonly></textarea>
+      <div class="actions">
+        <button id="copyPrompt">Copy prompt</button>
+        <a href="https://claude.ai/new" target="_blank" rel="noopener"><button class="ghost" type="button">Open Claude</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="step" id="step3">
+    <div class="head"><span class="n">3</span><h2>Render and check</h2></div>
+    <div class="body">
+      <label for="json">Claude's JSON</label>
+      <textarea id="json" rows="6" placeholder="Paste the JSON object here."></textarea>
+      <div class="actions">
+        <button id="renderBtn">Render</button>
+        <button id="printBtn" class="ghost" type="button">Print to PDF</button>
+        <button id="dlBtn" class="ghost" type="button">Save JSON</button>
+      </div>
+
+      <div id="report">
+        <p class="verdict" id="verdict"></p>
+        <ul id="gates"></ul>
+        <div id="notesOut"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="print-root">
+  <div id="sheet-wrap"><div id="sheet"></div></div>
+</div>
+
+<footer>
+  Everything runs in your browser. Nothing is uploaded, and there is no API key.<br>
+  Print with background graphics off, margins set to None, and headers and footers unchecked.
+</footer>
+
+<script src="/corpus.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

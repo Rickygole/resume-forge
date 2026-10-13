@@ -1,0 +1,155 @@
+                                                      RICKY GOLE
+                           (410) 390-1904 | rickygole32@gmail.com | LinkedIn | Google Scholar | Website
+M.S. researcher graduating December 2026, focused on the empirical evaluation of machine learning systems and the failure
+modes they hide once deployed. Five accepted publications, three as first author, at IEEE ICDM, ACM Learning@Scale, EDM,
+IEEE Cloud Summit, and IEEE BIBM, spanning LLM evaluation, clinical NLP, educational RAG, and cloud security.
+
+PUBLICATIONS
+     Gole, R., et al. "Detecting and Mitigating Convergent Failures in Clinical LLM Ensembles." IEEE ICDM 2026 (Accepted,
+     first author).
+     Gole, R., et al. "The Semantic Gap in Behavioral Embeddings: Why Linear Methods Fail for Educational RAG in
+     Mathematics." EDM 2026, pp. 123-134 (full paper, first author).
+     Gole, R., Heydari, V. "Mitigating Confused Deputy Attacks in AWS Cross-Account IAM Roles Through ExternalId
+     Enforcement." IEEE Cloud Summit 2026, pp. 154-160 (Accepted, first author).
+     Leonard, D., Gole, R., Dacon, J. "Prescriptive Persistence: Quantifying the Breakdown in Human-AI Pedagogical
+     Co-Regulation in ELL Writing Feedback." ACM Learning@Scale 2026, pp. 202-208 (second author).
+     Dacon, J., Gole, R., et al. "BIO-DQNA: Meta-Learning and Contrastive Reinforcement Learning for Personalized
+     Comorbidity Management in Type 1 Diabetes and Hypertension." IEEE BIBM 2025, pp. 5400-5407 (second author).
+
+EDUCATION
+Morgan State University, Baltimore, Maryland                                                Jan 2025 - Dec 2026 (Expected)
+ Master of Science in Advanced Computing, expected December 2026
+ GPA: 4.0/4.0 | Coursework: Deep Cloud Learning, Cybersecurity, Data Science, Network Security, Artificial Intelligence, Data
+ Structures.
+Caldwell University, Caldwell, New Jersey                                                             Aug 2019 - Dec 2023
+  Bachelor of Science in Computer Information Systems and Financial Economics, conferred December 2023 | GPA: 3.55/4
+
+RESEARCH EXPERIENCE
+Morgan State University, Baltimore, Maryland (Graduate Researcher)
+Convergent Failure Auditing of Clinical LLM Ensembles.                                                   Apr 2026 - Jun 2026
+    Five clinical LLMs picked the same wrong answer 24.6% of the time against a 1.23% chance baseline, a 19.9x gap across
+    4,089 questions.
+     Evaluated five models on MedQA-USMLE and MedMCQA, by benchmarking Llama-3-8B, GPT-4o, and DeepSeek-V3.
+     Reached 96.1% precision on MedQA at 6.7-8.0% review cost, by building a parameter-free safety routing rule.
+     Isolated the failure as content-driven, by shuffling distractor letters.
+Dialect Robustness Benchmarking for Automated Essay Scoring (DART).                                         Mar 2026 - Jun 2026
+     Exposed AAE scoring bias against matched-depth controls, beta = -0.029, p < 0.001, in a mixed-effects regression over
+     480 signed-drift observations.
+     Built a 480-pair benchmark across six U.S. English dialect families plus 160 matched-depth non-dialect controls, by
+     engineering a feature-scaffolded generation prompt.
+     Showed chain-of-thought prompting amplifies drift across three LLM judges, by auditing five prompting conditions.
+     Reached a 92.71% pass rate on generated variants, by building a three-gate DeBERTa-v3 NLI validation pipeline.
+Temporal OOD Audit of Clinical NLP (KnowledgeRAG-DDI).                                                      Mar 2025 - Apr 2026
+    BiomedBERT collapsed from 0.7273 F1 to 0.0000 out of distribution.
+     Built the 600-pair post-2019 FDA evaluation set behind that collapse, and ruled out drug novelty, by reproducing 0.0000 F1
+     in-distribution on name-only inputs.
+     Recovered 0.2640 F1 out of distribution, by building a hybrid BM25 and FAISS retrieval probe over FDA labels.
+LLM Evaluation and Human-AI Alignment (Prescriptive Persistence).                                    Dec 2025 - Jan 2026
+   Reduced GPT-5.2 over-correction from 42.9% to 6.6% on Korean L1 sentences, by running a frugal-prompt experiment.
+     Established a 9.1% mean over-intervention rate (t = 103.19, p < 0.001), by testing across 12,979 ELL sentences.
+     Defined the Prescriptive Gap metric and used it to align 60% of GPT-5.2 outputs with the human tolerance threshold.
+     Documented an 11.1% semantic drift gap between human and AI revisions, by piloting a Semantic Drift Index.
+Retrieval-Augmented Behavioral Embedding Analysis (Semantic Gap).                                       Dec 2025 - Jan 2026
+     Correlation between a 50-dimensional behavioral manifold and semantic embeddings came out near zero, r = 0.006.
+     Reduced hallucination rates (p < 0.001), by fine-tuning Llama-3-8B with DPO and LoRA on 600 contrastive pairs.
+     Built that manifold, by running SVD over 15.8 million interaction records.
+     Validated across 122 prompts with 10,000 bootstrap resamples.
+Benchmark Validity Audit of Knowledge Tracing.                                                                  Mar 2026 - Apr 2026
+    A 2-feature baseline recovered 35.7% of DKT above-chance AUC over 95.3M EdNet interactions.
+     Showed recovery collapse from 81.0% to 34.8%, by evaluating a difficulty-augmented baseline under zero overlap.
+     Formalized the recovery ratio as a benchmark diagnostic with calibration (Brier, ECE) and 5-partition seed stability.
+Strategic Friction Mining in Multi-Turn LLM Collaboration.                                                  Mar 2026 - Jun 2026
+     Built a 600-task benchmark across three domains and three persona profiles, by assembling nine public datasets.
+     Contrasted a seamless-answer agent against a Strategic Friction Framework, by holding task and turn budget constant.
+     Encoded multi-turn traces into an 11-state vocabulary, by instrumenting a persona-isolated orchestration layer.
+     Quantified behavior shifts, by mining PrefixSpan subsequences, transition entropy, and UMAP-HDBSCAN clusters.
+Cloud Security Evaluation (AWS Confused Deputy Mitigation).                                             Jan 2025 - May 2025
+    Blocked confused deputy attacks across six scenarios, by testing ExternalId and SourceAccount IAM enforcement.
+     Processed 1 million audit log events, by building a Python and SQL entropy-based anomaly detector over STS.
+     Bounded adversarial success probability by ExternalId entropy in closed form, validated against brute-force throughput.
+
+WORK EXPERIENCE
+Center for Equitable AI and Machine Learning Systems (CEAMLS). (Research Mentor)                     May 2025 - Aug 2025
+     Raised policy success to 94% and cut unsafe-action rate from 12% to 2% on BIO-DQNA (second author), by designing
+     tiered clinical rewards.
+     Built a PyTorch clinical environment around a Dueling DQN with prioritized replay and noisy layers, and personalized
+     policies across patient trajectories with contrastive self-supervised meta-learning.
+     Benchmarked six DQN variants including Rainbow and Categorical, by running 100 seeds per configuration on GPUs.
+Center for Equitable AI and Machine Learning Systems (CEAMLS). (Research Mentor)                    May 2026 - Jun 2026
+     Built Signal-Gated Omic Fusion (SGOF), a graph-convolutional model holding AUROC at 0.664 where MOGONET
+     dropped 0.149.
+     Diagnosed modality dominance, by showing 258,782 SNPs collapse naive fusion to 0.334 AUROC on a 111-patient cohort.
+     Attributed degradation to uninformativeness alone, by varying only input dimensionality in synthetic-noise runs.
+     Reported SGOF's own gain as not significant: paired-bootstrap change 0.012, CI [-0.035, 0.059].
+Morgan State University. (Teaching Assistant)                                                                Jan 2025 - Present
+    Supported 50+ students across operating systems courses, by delivering Linux and systems-level lab instruction.
+Caldwell University. (Senior Student Technician)                                                    Aug 2019 - Dec 2023
+    Sustained 99% uptime across VMware VDI, Linux, and Windows for 500+ users, by hardening and patching systems.
+     Reduced recurring support tickets by 20%, by automating daily log analysis and health checks in Python.
+TeamLogicIT. (Level 2 Technology Consultant)                                                             Aug 2022 - Dec 2022
+    Reduced average security incident response time by 30%, by monitoring 50+ enterprise client networks in a SOC.
+     Decreased unauthorized-access attempts by 35%, by auditing Sophos Firewalls, Cisco Duo MFA, and Active Directory.
+     Documented risk findings and remediation plans under SOX and SOC 2.
+
+PROJECTS
+CareLoop: Preregistered Triage Evaluation for a Medication Adherence Agent. (Hackathon project)                              Sep 2026
+    Published a null result, by preregistering the under-triage contrast and reporting 0.000 under-triage in every arm.
+    Ran 1,260 API calls across 24 vignettes, 5 conditions, and 3 arms in one preregistered run at temperature 0.
+     Resolved a regex Tier 0 floor with no network call; final severity is the max of that floor and the model result.
+     Reported the full pipeline losing to the naive baseline on action-router accuracy, 0.625-0.750 against 0.792-0.875.
+   Kept every patient record synthetic and the system outside medical-device scope.
+Overturn: Seven-Agent Fleet for Appealing Denied Health Insurance Claims. (Hackathon project)                              Aug 2026
+    Built a seven-agent fleet reading denial letters and drafting appeals, by chaining Python agents end to end.
+     Screened every denial letter for prompt injection with a Sentinel agent authorized to quarantine and halt the pipeline.
+     Gated transmission behind two human signatures, a billing clerk's and the ordering clinician's, on the same draft.
+     Deployed three live Cloud Run services with least privilege per agent identity, by running Docker, Pub/Sub, Firestore, and
+     Vertex AI with Gemini models.
+     Published the verification layer's false-positive rate as unmeasured, after reading CASE-003's rejections line by line.
+     Kept 765 tests green from a clean clone, by making the full pipeline runnable offline with no cloud project.
+   Synthesized the payer and every claim record end to end; generated the patient charts from a Synthea base.
+Quorum: Agent Graph for Issue Continuity in Baltimore City Council Records. (Hackathon project)                   Sep 2026
+    Decided whether a council record continues an issue, by wiring four Strands Agents into a multi-agent graph.
+    Hand-labeled 50 record pairs and ablated every domain hint, dropping accuracy from 100% to 94% against an 84%
+    best-single-feature deterministic baseline.
+     Served a live public demo with no login, by deploying to Amazon Bedrock AgentCore Runtime behind API Gateway and
+     Lambda with OpenTelemetry returning structured output and latency per call.
+     Grounded decisions in 1,679 Legistar records and 237,092 parcels, by caching both with a retrieval timestamp.
+ReadAloud: On-Device Speech AI for K-12 Reading Assessment. (CEAMLS Human-AI Challenge)                                 Jul 2026
+    Built a privacy-first reading scorer with no audio leaving the device, by running quantized Whisper in-browser via ONNX.
+     Reached a 0.48% false positive rate and 0.4 mean absolute WCPM error, by tuning the scorer against false positives.
+     Reported per-class F1 of 85.7% substitution, 96.8% omission, and 90.9% insertion, by scoring 50 planted miscues.
+     Killed a planned speech-difference layer rather than ship it untested: zero firings across five clips of disfluent speech, and
+     twice on a sixth, a non-decoding read.
+   Tested on synthesized speech only; never recorded a child's voice.
+Thermal Last Mile: Segment-Level Heat Exposure on the Walk to NRG Stadium.                                          Sep 2026
+    Priced Houston's six noon World Cup kickoffs at 320,908 degree-hours, 69% of measured total heat exposure on the walk.
+    A raymarched building shadow model returned a shaded route fraction of exactly zero at every noon kickoff.
+     Showed the corridor is uniformly dangerous, by measuring only 0.95 C spread across all 172 segments.
+     Excluded the 23 June match from every trip aggregate, by refusing to fill a missing wind observation.
+   Modeled every exposure value; took no field measurement.
+Bias Lab: Browser-Based ML Fairness Auditing Tool. (Winner, AI for Education Track)                                            Jul 2026
+     Shipped a browser app training a classifier and showing six fairness metrics live, by keeping a 187 KB first load.
+     Verified a from-scratch logistic regression matches scikit-learn to seven decimals, by writing 103 automated tests.
+     Built it for students finishing an introductory AI course, to slot into an ethics module with no setup or accounts.
+   Measured in the browser, not in a classroom. ML Empowerment Build Challenge 2.0. Stack: React, Vite, Web Workers.
+sesame-robot: ESP32 Quadruped Robot Firmware Written From Scratch.                                                           Aug 2026
+     Made inverse kinematics and gait math unit-testable without hardware, by writing the core in pure C++11.
+     Exercised the firmware without a board, by building a host test harness and an offline Python gait simulator.
+     Compiled clean for ESP32 at 66% flash and 15% RAM.
+     Named servo directions and tick timing as unmeasured without a board.
+
+SKILLS
+Languages & Tools: Python, SQL, C++, Java, JavaScript, PyTorch, scikit-learn, Pandas, NumPy, HuggingFace Transformers,
+FastAPI, Pydantic, Docker, Git, Linux.
+LLMs & Agents: Large language models, retrieval-augmented generation (RAG), prompt engineering, fine-tuning (DPO, LoRA),
+agentic and multi-agent systems, embeddings, hybrid retrieval (BM25, FAISS), structured output, prompt-injection screening.
+Evaluation & Statistics: Benchmarking, calibration (Brier, ECE), out-of-distribution auditing, preregistration, ablation studies,
+mixed-effects regression, bootstrap confidence intervals, hyperparameter sweeps, statistical analysis, experiment design.
+Machine Learning: Reinforcement learning (Rainbow DQN, Dueling DQN, reward shaping), transformers, contrastive
+representation learning, meta-learning, graph convolutional networks, NLP.
+ML Systems & Data: ETL, large-scale data processing, training pipelines, experimentation frameworks, training-dynamics
+analysis, GPU training infrastructure, data structures, algorithms.
+Mathematics: Linear algebra, probability, statistics, optimization, numerical methods.
+Cloud & Infrastructure: AWS (Bedrock, AgentCore, Lambda, API Gateway, S3, IAM, STS, CloudTrail), Google Cloud (Cloud
+Run, Pub/Sub, Firestore, Vertex AI, Cloud Build), Strands Agents, OpenTelemetry.
+

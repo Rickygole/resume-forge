@@ -1,0 +1,71 @@
+/* Ported verbatim from career-ops/resume-build builders. Changing any value here
+   changes the rendered PDF, so keep it in sync with build.py. */
+@page { size: Letter; margin: 0.19in 0.63in 0.35in 0.56in; }
+
+#sheet * { box-sizing: border-box; }
+#sheet {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 10pt;
+  line-height: 1.17;
+  color: #000;
+  background: #fff;
+  font-kerning: none;
+  font-variant-ligatures: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: never;
+  orphans: 2; widows: 2;
+}
+#sheet h1 {
+  font-size: 16pt; font-weight: bold; text-align: center;
+  margin: 0 0 1pt 0; letter-spacing: 0.4pt;
+}
+#sheet .contact { text-align: center; font-size: 10pt; margin: 0 0 2pt 0; }
+#sheet .summary { margin: 0 0 1pt 0; text-align: left; }
+#sheet h2 {
+  font-size: 10pt; font-weight: bold; text-transform: uppercase;
+  margin: 4pt 0 1pt 0; padding: 0 0 1pt 0;
+  border-bottom: 1px solid #000;
+  break-after: avoid; page-break-after: avoid;
+}
+#sheet .entry { margin: 0 0 2pt 0; break-inside: auto; }
+#sheet .eh {
+  display: table; width: 100%; table-layout: auto;
+  break-after: avoid; page-break-after: avoid;
+}
+#sheet .ehl { display: table-cell; text-align: left; }
+#sheet .ehd {
+  display: table-cell; text-align: right; vertical-align: baseline;
+  white-space: nowrap; font-style: italic; padding-left: 6pt; width: 1%;
+}
+#sheet ul { list-style: none; margin: 0; padding: 0; }
+#sheet li { padding-left: 11pt; text-indent: -7.8pt; margin: 0 0 0.4pt 0; }
+#sheet li::before {
+  content: ""; display: inline-block; text-indent: 0;
+  width: 2.7pt; height: 2.7pt; border-radius: 50%; background: #000;
+  margin-right: 5.1pt; vertical-align: 1.2pt;
+}
+#sheet p.scope { margin: 1.6pt 0 0 11pt; font-style: italic; }
+#sheet p.edu { margin: 0 0 0 7pt; }
+#sheet p.sk { margin: 0 0 0.6pt 0; }
+#sheet a { color: #000; text-decoration: none; }
+#sheet .nb { white-space: nowrap; }
+
+/* Screen preview only: emulate the Letter text column so the page-break
+   estimate matches what Chrome will paginate at print time. */
+@media screen {
+  #sheet {
+    width: 7.31in;            /* 8.5 - 0.63 - 0.56 */
+    padding: 0;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,.18), 0 8px 28px rgba(0,0,0,.10);
+    outline: 1px solid rgba(0,0,0,.08);
+  }
+  #sheet-wrap { padding: 20px; background: #f1f1ef; overflow: auto; }
+}
+@media print {
+  html, body { margin: 0 !important; padding: 0 !important; }
+  body > *:not(#print-root) { display: none !important; }
+  #print-root, #sheet-wrap, #sheet { display: block !important; }
+  #sheet-wrap { padding: 0 !important; background: none !important; overflow: visible !important; }
+  #sheet { width: auto !important; box-shadow: none !important; outline: none !important; margin: 0 !important; }
+}
